@@ -15,8 +15,8 @@ app.get('/', (req: any, res: any) => {
 
 
 app.post("/api/bookings", async (req: any, res: any) => {
-  console.log("RECEIVED FROM FRONTEND:", req.body);
-
+console.log("API HIT");
+console.log(req.body);
   try {
     const result = await db.collection("bookings").add(req.body);
 
