@@ -1,0 +1,6 @@
+{
+  "name": "Success Tuition",
+  "description": "A premium tuition center platform empowering students from LKG to 12th grade with personalized mentoring and excellence in education. Now fully backed by a powerful Express server supporting live student/parent reviews and booking tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

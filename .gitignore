@@ -1,0 +1,9 @@
+node_modules/ - Ignore the node_modules directory, which contains all the installed dependencies for a Node.js project. This directory can be very large and is not necessary to include in version control since it can be regenerated using the package.json file.
+build/ - Ignore the build directory, which contains the compiled output of the project.
+dist/ - Ignore the distribution directory, which contains the final packaged output for deployment.
+coverage/ - Ignore the coverage directory, which contains code coverage reports.
+.DS_Store - Ignore macOS directory metadata files.
+*.log - Ignore log files.
+.env*
+!.env.example
+server/firebase-key.json - Ignore the Firebase service account key file, which contains sensitive credentials and should not be committed to version control.
