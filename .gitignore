@@ -6,4 +6,5 @@ coverage/ - Ignore the coverage directory, which contains code coverage reports.
 *.log - Ignore log files.
 .env*
 !.env.example
+server/node_modules/ - Ignore the node_modules directory within the server folder, which contains all the installed dependencies for the server-side code. This directory can also be very large and is not necessary to include in version control since it can be regenerated using the package.json file.
 server/firebase-key.json - Ignore the Firebase service account key file, which contains sensitive credentials and should not be committed to version control.
