@@ -10,7 +10,7 @@ const BookingPage = () => {
     email: "",
     date: "",
     time: "",
-    type: "demo", // 'demo' or 'doubt'
+    type: "doubt", // 'demo' or 'doubt'
   });
 
   const handleSubmit = async (e: React.FormEvent) => {

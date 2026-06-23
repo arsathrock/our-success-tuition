@@ -14,26 +14,22 @@ app.get('/', (req: any, res: any) => {
 
 
 
-app.post("/api/bookings", async (req: any, res: any) => {
-console.log("API HIT");
-console.log(req.body);
-  try {
-    const result = await db.collection("bookings").add(req.body);
+const fs = require("fs");
 
-    console.log("FIREBASE SAVED:", result.id);
+app.post("/api/bookings", async (req : any, res : any) => {
 
-    res.json({
-      success: true,
-      message: "Booking saved"
-    });
+  const booking = req.body;
 
-  } catch (error) {
-    console.error("FIREBASE ERROR:", error);
+  fs.appendFileSync(
+    "bookings.json",
+    JSON.stringify(booking) + "\n"
+  );
 
-    res.status(500).json({
-      success: false
-    });
-  }
+  await db.collection("bookings").add(booking);
+
+  res.json({
+    success: true
+  });
 });
 
 app.listen(5000, () =>{
